@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *
+        {
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+            
+        }
+
+        body
+        {
+            background-color: rgb(56, 46, 46);
+        }
+        .container
+        {
+            background-color: transparent;
+            width: 80%;
+            margin: 100px auto;
+        }
+        .inp
+        {
+            width: 100%;
+            font-size: 30px;
+            height: 60px;
+            background-image: linear-gradient(to right,red,orange,yellow);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .inp:focus
+        {
+            background-image: linear-gradient(red,pink);
+            overflow: hidden;
+        }
+        .buttons
+        {
+            margin: 0px 20px;
+            background-color: rgb(238, 198, 185);
+            height: 100%;
+            display: grid;
+            grid-template-columns: auto auto auto auto auto;
+    
+            
+        }
+        .num
+        {
+            background-color: yellowgreen;
+            text-align: center;
+            line-height: 100px;
+            border-radius: 15px;
+            margin:5px;
+            
+        }
+        .sign
+        {
+            background-color: tomato;
+            text-align: center;
+            line-height: 100px;
+            border-radius: 15px;
+            margin:5px;
+        }
+        .num:active
+        {
+            background-color: teal;
+        }
+        .sign:active
+        {
+            background-color: blueviolet;
+        }
+
+        #Enter{
+            grid-column: 1/6;
+        }
+
+        @media screen and (min-width:1000px){
+            .buttons
+        {
+            margin: 0px 20px;
+            background-color: rgb(238, 198, 185);
+            height: 100%;
+            display: grid;
+            grid-template-columns: auto auto auto auto auto;
+    
+            
+        }
+        .num
+        {
+            background-color: tomato;
+            text-align: center;
+            line-height: 120px;
+            border-radius: 15px;
+            margin:10px;
+            
+        }
+        .sign
+        {
+            background-color: yellowgreen;
+            text-align: center;
+            line-height: 120px;
+            border-radius: 15px;
+            margin:10px;
+        }
+        
+
+            
+        }
+        
+    
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="display">
+                <input type="text" class="inp">
+        </div>
+        <div class="buttons">
+            <div class="num" id="num0" onclick="num0()">0</div>
+            <div class="num" id="num1" onclick="num1()">1</div>
+            <div class="num" id="num2" onclick="num2()">2</div>
+            <div class="num" id="num3" onclick="num3()">3</div>
+            <div class="num" id="num4" onclick="num4()">4</div>
+            <div class="num" id="num5" onclick="num5()">5</div>
+            <div class="num" id="num6" onclick="num6()">6</div>
+            <div class="num" id="num7" onclick="num7()">7</div>
+            <div class="num" id="num8" onclick="num8()">8</div>
+            <div class="num" id="num9" onclick="num9()">9</div>
+            <div class="sign" id="sign1" onclick="sign1()">+</div>
+            <div class="sign" id="sign2" onclick="sign2()">-</div>
+            <div class="sign" id="sign3" onclick="sign3()">*</div>
+            <div class="sign" id="sign4" onclick="sign4()">/</div>
+            <div class="sign" id="Clear" onclick="clean()">Clear</div>
+            <div class="sign" id="Enter" onclick="enter()">Enter</div>
+
+        </div>
+    </div>
+    
+    <script>
+                       
+        function num0(){
+            document.querySelector(".inp").value = document.querySelector(".inp").value + '0';
+        }
+        function num1(){
+            document.querySelector(".inp").value = document.querySelector(".inp").value + '1';
+        }
+        function num2(){
+            document.querySelector(".inp").value = document.querySelector(".inp").value + '2';
+        }
+        function num3(){
+            document.querySelector(".inp").value = document.querySelector(".inp").value + '3';
+        }
+        function num4(){
+            document.querySelector(".inp").value = document.querySelector(".inp").value + '4';
+        }
+        function num5(){
+            document.querySelector(".inp").value = document.querySelector(".inp").value + '5';
+        }
+        function num6(){
+            document.querySelector(".inp").value = document.querySelector(".inp").value + '6';
+        }
+        function num7(){
+            document.querySelector(".inp").value = document.querySelector(".inp").value + '7';
+        }
+        function num8(){
+            document.querySelector(".inp").value = document.querySelector(".inp").value + '8';
+        }
+        function num9(){
+            document.querySelector(".inp").value = document.querySelector(".inp").value + '9';
+        }
+        function sign1(){
+            document.querySelector(".inp").value = document.querySelector(".inp").value + '+';
+        }
+        function sign2(){
+            document.querySelector(".inp").value = document.querySelector(".inp").value + '-';
+        }
+        function sign3(){
+            document.querySelector(".inp").value = document.querySelector(".inp").value + '*';
+        }
+        function sign4(){
+            document.querySelector(".inp").value = document.querySelector(".inp").value + '/';
+        }
+        function enter(){
+            document.querySelector(".inp").value = eval(document.querySelector(".inp").value);
+        }
+        function clean(){
+            document.querySelector(".inp").value =' ';
+        }
+
+
+    </script>
+
+</body>
+</html>
